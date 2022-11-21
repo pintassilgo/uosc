@@ -216,7 +216,14 @@ function Timeline:render()
 	ass:draw_stop()
 
 	-- Progress
-	ass:rect(fax, fay, fbx, fby, {opacity = options.timeline_opacity})
+	if size == self.size_min then
+		ass:rect(fax, fay, fbx, fby, {
+			color = serialize_rgba(options.timeline_min_color).color,
+			opacity = options.timeline_min_opacity
+		})
+	else
+		ass:rect(fax, fay, fbx, fby, {opacity = options.timeline_opacity})
+	end
 
 	-- Uncached ranges
 	local buffered_time = nil
