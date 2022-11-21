@@ -83,7 +83,7 @@ function TopBar:update_dimensions()
 	self.size = state.fullormaxed and options.top_bar_size_fullscreen or options.top_bar_size
 	self.icon_size = round(self.size * 0.5)
 	self.spacing = math.ceil(self.size * 0.25)
-	self.font_size = math.floor((self.size - (self.spacing * 2)) * options.font_scale)
+	self.font_size = math.floor((options.top_bar_title_size - (self.spacing * 2)) * options.font_scale)
 	self.button_width = round(self.size * 1.15)
 	self.ay = Elements.window_border.size
 	self.bx = display.width - Elements.window_border.size

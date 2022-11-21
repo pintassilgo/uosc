@@ -66,6 +66,7 @@ defaults = {
 	top_bar_persistency = '',
 	top_bar_controls = true,
 	top_bar_title = true,
+	top_bar_title_size = 40,
 	top_bar_title_opacity = 0.8,
 
 	window_border_size = 1,
